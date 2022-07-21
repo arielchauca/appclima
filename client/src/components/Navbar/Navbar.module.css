@@ -1,0 +1,16 @@
+.container{
+    height: 2.5rem;
+    border: solid 2px black;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo{
+    width: 2.2rem;
+}
+
+.boxInput{
+    width: 20rem;
+}
+
