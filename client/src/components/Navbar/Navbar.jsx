@@ -18,13 +18,14 @@ export default function Navbar() {
         setInput(e.target.value)
     }
     
-    const handleClick = () => {
+    const handleSubmit = (e) => {
+      e.preventDefault()
       dispatch(getCityByName(input))
         setInput("")
     }
     
   return (
-    <div className={style.container}>
+    <form className={style.container} onSubmit={handleSubmit}>
       <div className={style.containerNavbarLeft}>
         <img className={style.logo} src={moon} alt="logo de la luna" />
         <SiGooglemaps />
@@ -37,13 +38,13 @@ export default function Navbar() {
           onChange={handleSearch}
           placeholder="Ingrese el nombre de una ciudad"
         />
-        <MdSearch onClick={handleClick} />
+        <MdSearch onClick={handleSubmit} />
       </div>
 
       <div className={style.containerNavbarRight}>
         <FaShareAlt />
         <FaUser />
       </div>
-    </div>
+    </form>
   );
 }

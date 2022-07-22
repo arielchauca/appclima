@@ -1,0 +1,8 @@
+.containerDays{
+    border: black 2px solid;
+    width: 12rem;
+    height: 21rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

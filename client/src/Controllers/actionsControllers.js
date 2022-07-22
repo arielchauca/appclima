@@ -6,3 +6,7 @@ export function filterCities (state, payload){
         return [...state.cities, payload]
     }
 }
+
+export function deleteCities (state, payload) {
+    return state.cities.filter(e => e.id !== payload)
+}

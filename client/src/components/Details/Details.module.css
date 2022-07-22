@@ -1,0 +1,14 @@
+.containerDetails{
+    width: 100%;
+    border: solid 0.1px black;
+    height: 25rem;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.containerDays{
+    display: flex;
+    justify-content: space-around;
+}
