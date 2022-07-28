@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCityById, getDaysCity } from '../../redux/actions';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
 import Days from '../Days/Days.jsx';
 import moment from 'moment';
 import style from './Details.module.css';
@@ -19,12 +21,14 @@ export default function Details (){
     },[])
 
     useEffect(() => {
-        dispatch(getDaysCity(city.latitud, city.longitud))
+        if(city.latitud && city.longitud){
+            dispatch(getDaysCity(city.latitud, city.longitud))
+        }
     },[city])
 
     const minutos = city.time / 60;
     const hora = moment().utcOffset(minutos).format("h:mm A");
-    
+
     return(<div>
        {city? <div className={style.containerDetails}>
          <img src={`http://openweathermap.org/img/wn/${city.img}@2x.png`} alt="" />
@@ -53,5 +57,21 @@ export default function Details (){
                     />
                 ))}
             </div>: null}
+
+           {city.latitud && city.longitud ? <MapContainer
+                center={[city.latitud, city.longitud]}
+                zoom={11}
+                style={{ width: '80vw', height: '40vh'}}
+            >
+                <TileLayer
+                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+                 <Marker position={[city.latitud, city.longitud]}>
+                    <Popup>
+                        A pretty CSS3 popup. <br /> Easily customizable.
+                    </Popup>
+                </Marker>
+            </MapContainer>:null}
     </div>)
 }
