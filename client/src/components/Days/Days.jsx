@@ -12,7 +12,7 @@ export default function Days ({max, min, date, img, day, night}){
         <h3>{dia}</h3>
         <img src={`http://openweathermap.org/img/wn/${img}@2x.png`} alt="" />
         <p>Temperatura: </p>
-        <p>{`Mañana: ${Math.round(day)}° Noche: ${Math.round(night)}° `}</p>
         <p>{`${max}° / ${min}°`}</p>
+        <p>{`Mañana: ${Math.round(day)}° Noche: ${Math.round(night)}° `}</p>
     </div>)
 }

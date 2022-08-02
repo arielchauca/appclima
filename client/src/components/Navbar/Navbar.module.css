@@ -1,16 +1,82 @@
-.container{
-    height: 2.5rem;
-    border: solid 2px black;
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
 .logo{
     width: 2.2rem;
+}
+
+.logo:hover{
+    cursor: pointer;
+    transition-duration: 300ms;
+    transform: scale(1.10);
+}
+
+.logo:active {
+    transition-duration: 300ms;
+    transform: scale(0.96);
+}
+
+
+.logoIcon{
+    width: 4.5rem;
+    height: 2rem
+}
+
+.logoIcon:hover{
+    cursor: pointer;
+    transition-duration: 300ms;
+    transform: scale(1.10);
+}
+
+.logoIcon:active {
+    transition-duration: 300ms;
+    transform: scale(0.96);
 }
 
 .boxInput{
     width: 20rem;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+.container{
+    height: 50px;
+    width: 100%;
+    background-color: #485567;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top:0;
+}
+
+
+.boxInput{
+    height: 38px;
+    width: 450px;
+    text-align-last: center;
+    font-size: 18px;
+}
+
+.logoIcon2{
+    position: relative;
+    right: 55px;
+    width: 4rem;
+    height: 2.2rem
+}
+
+.logoIcon2:hover{
+    cursor: pointer;
+    transition-duration: 300ms;
+    transform: scale(1.10);
+}
+
+.logoIcon2:active {
+    transition-duration: 300ms;
+    transform: scale(0.96);
+}
+
+.containerNavbarCenter{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

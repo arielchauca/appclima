@@ -10,7 +10,7 @@ export default function Carts ({cities}){
         dispatch(deleteCity(id))
     }
 
-    return(<div>
+    return(<div className={style.container}>
         {
         cities.map(e => (<div key={e.id}>
             <Cart
@@ -22,7 +22,7 @@ export default function Carts ({cities}){
             lat={e.latitud}
             long={e.longitud}
             /> 
-            <button onClick = {() => handleDelete(e.id)}>X</button>
+            <button className={style.btnDelete} onClick = {() => handleDelete(e.id)}>X</button>
         </div>))
         }
     </div>)

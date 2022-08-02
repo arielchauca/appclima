@@ -58,6 +58,7 @@ export const getCityByName = (name) => async (dispatch) => {
 };
 
 export const deleteCity = (id) => async (dispatch) => {
+  console.log(id)
   try {
     dispatch({
       type: DELETE_CITY,

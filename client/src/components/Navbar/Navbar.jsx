@@ -43,7 +43,7 @@ export default function Navbar() {
         <Link to="/">
         <img className={style.logo} src={moon} alt="logo de la luna" />
         </Link>
-        <SiGooglemaps onClick={geolocation}/>
+        <SiGooglemaps className={style.logoIcon} onClick={geolocation}/>
       </div>
       <div className={style.containerNavbarCenter}>
         <input
@@ -53,12 +53,12 @@ export default function Navbar() {
           onChange={handleSearch}
           placeholder="Ingrese el nombre de una ciudad"
         />
-        <MdSearch onClick={handleSubmit} />
+        <MdSearch  className={style.logoIcon2} onClick={handleSubmit} />
       </div>
 
       <div className={style.containerNavbarRight}>
-        <FaShareAlt />
-        <FaUser />
+        <FaShareAlt  className={style.logoIcon}/>
+        <FaUser className={style.logoIcon}/>
       </div>
     </form>
   );

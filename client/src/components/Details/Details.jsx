@@ -46,8 +46,9 @@ export default function Details (){
         </div>:null}
 
            {daysCity.daily?<div className={style.containerDays}>
-                {daysCity.daily.map(e => (
+                {daysCity.daily.map((e,i) => (
                     <Days
+                     key={i}
                      date={e.dt}
                      img={e.weather[0].icon}
                      day={e.temp.morn}

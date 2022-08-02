@@ -1,0 +1,23 @@
+.container{
+    border-radius: 3%;
+    height: 350px;
+    width: 300px ;
+    background-color: #9eebe1;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px black
+}
+
+.container:hover{
+    transition-duration: 250ms;
+    transform: scale(1.03);
+}
+
+.container:active{
+    transition-duration: 250ms;
+    transform: scale(0.95)
+}

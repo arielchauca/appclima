@@ -1,5 +1,13 @@
 .containerHome{
     width: 100%;
-    height: 91vh;
-    background-color: gray;
+    height: 100vh;
+    background-image: url("../../assets/images/fondo5.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.CartsContainer{
+    width: 100vw;
+    height: 80vh;
 }

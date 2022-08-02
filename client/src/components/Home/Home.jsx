@@ -16,6 +16,8 @@ export default function Home (){
 
 
     return(<div className={style.containerHome}>
+        <div className={style.CartsContainer}>
         <Carts cities={cities} />
+        </div>
     </div>)
 }
